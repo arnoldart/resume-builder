@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText, Users, Zap } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -90,13 +91,15 @@ export default function Home() {
                   className="bg-white p-6 rounded-lg shadow-sm border"
                 >
                   <p className="text-muted-foreground mb-4">
-                    "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                   </p>
                   <div className="flex items-center">
-                    <img
+                    <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}
                       className="h-10 w-10 rounded-full mr-3"
+                      width={40}
+                      height={40}
                     />
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
@@ -153,7 +156,7 @@ const testimonials = [
   },
   {
     content:
-      "The best resume builder I've used. The interface is intuitive and the templates are modern and professional.",
+      "The best resume builder I&apos;ve used. The interface is intuitive and the templates are modern and professional.",
     name: "Emily Rodriguez",
     position: "Product Designer",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
