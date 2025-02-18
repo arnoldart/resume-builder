@@ -33,17 +33,17 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <Button className="w-full" asChild>
-                <Link href="/resume/new">
+                <Link href="/resume-editor">
                   <Plus className="mr-2 h-4 w-4" />
                   Create New Resume
                 </Link>
               </Button>
-              <Button variant="outline" className="w-full" asChild>
+              {/* <Button variant="outline" className="w-full" asChild>
                 <Link href="/templates">
                   <FileText className="mr-2 h-4 w-4" />
                   Browse Templates
                 </Link>
-              </Button>
+              </Button> */}
             </CardContent>
           </Card>
 
@@ -59,28 +59,6 @@ export default function DashboardPage() {
                   No resumes created yet. Create your first resume to get started!
                 </p>
               </div>
-            </CardContent>
-          </Card>
-
-          {/* Account Overview */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Account Overview</CardTitle>
-              <CardDescription>Your account information and settings</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Button variant="outline" className="w-full" asChild>
-                <Link href="/settings">
-                  <Settings className="mr-2 h-4 w-4" />
-                  Account Settings
-                </Link>
-              </Button>
-              <Button variant="outline" className="w-full" asChild>
-                <Link href="/history">
-                  <History className="mr-2 h-4 w-4" />
-                  Activity History
-                </Link>
-              </Button>
             </CardContent>
           </Card>
         </div>

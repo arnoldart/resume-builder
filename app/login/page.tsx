@@ -7,14 +7,28 @@ import { FileText } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+// Dummy user data
+const DUMMY_USER = {
+  email: "adoni.091203@gmail.com",
+  password: "123",
+  name: "Adoni"
+};
+
 export default function LoginPage() {
   const router = useRouter();
 
+  const handleLogin = () => {
+    // Simpan status login dan data pengguna ke localStorage
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("user", JSON.stringify(DUMMY_USER));
+    router.push("/dashboard");
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, we'll just redirect to dashboard
+    // For now, we'll just call handleLogin
     // In a real app, you would handle authentication here
-    router.push("/dashboard");
+    handleLogin();
   };
 
   return (
